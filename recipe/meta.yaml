@@ -1,6 +1,6 @@
 {% set name = "cdsdashboards" %}
-{% set version = "0.0.19" %}
-{% set build_number = "0" %}
+{% set version = "0.1.0" %}
+{% set build_number = 0 %}
 
 package:
   name: {{ name|lower }}-meta
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ccc6eebb9e5471e6dcef8bc7d028561a8c8649b5d7b8dfcb3472ba3796fe7867
+  sha256: 085b72fdbc572e5baea8ffc55985cc412554c376db15af7578ddb892aa3ac59a
 
 build:
   noarch: python
@@ -62,11 +62,12 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'A Dashboard publishing solution for Data Science teams to share results with decision makers.'
+  summary: A Dashboard publishing solution for Data Science teams to share results with decision makers.
   doc_url: https://cdsdashboards.readthedocs.io/
   dev_url: https://github.com/ideonate/cdsdashboards
 
 extra:
   feedstock-name: {{ name|lower }}
   recipe-maintainers:
+    - danlester
     - fcollonval
