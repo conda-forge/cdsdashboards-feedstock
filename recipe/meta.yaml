@@ -33,7 +33,11 @@ outputs:
         - pluggy
     test:
       imports:
-        - cdsdashboards
+        - cdsdashboards  
+      requires:
+        - pip
+      commands:
+        - pip check
   - name: {{ name|lower }}-singleuser
     build:
       number: {{ build_number }}
