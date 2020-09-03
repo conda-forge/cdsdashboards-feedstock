@@ -1,5 +1,5 @@
 {% set name = "cdsdashboards" %}
-{% set version = "0.3.3" %}
+{% set version = "0.3.4" %}
 {% set build_number = 0 %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2d518dbcc6466d07f95a945852eb5a912ba8e1c5078009d3cc184d1105c91511
+  sha256: 2015d490b46e53cebd93ba87033f37aa2b4effabfce80e1c40f4ac2957476a55
 
 build:
   noarch: python
