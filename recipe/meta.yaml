@@ -1,6 +1,6 @@
 {% set name = "cdsdashboards" %}
 {% set version = "0.3.4" %}
-{% set build_number = 0 %}
+{% set build_number = 1 %}
 
 package:
   name: {{ name|lower }}-meta
@@ -48,6 +48,7 @@ outputs:
         - jhsingle-native-proxy >=0.5.2
         - bokeh-root-cmd >=0.0.5
         - plotlydash-tornado-cmd >=0.0.4
+        - rshiny-server-cmd >=0.0.2
     test:
       requires:
         - bokeh
@@ -56,10 +57,12 @@ outputs:
         - jhsingle_native_proxy
         - bokeh_root_cmd
         - plotlydash_tornado_cmd
+        - rshiny_server_cmd
       commands:
         - jhsingle-native-proxy --help
         - bokeh-root-cmd --help
         - plotlydash-tornado-cmd --help
+        - rshiny-server-cmd --help
 
 about:
   home: https://github.com/ideonate/cdsdashboards
