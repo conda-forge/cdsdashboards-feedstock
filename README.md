@@ -5,11 +5,13 @@ Home: https://github.com/ideonate/cdsdashboards
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cdsdashboards-feedstock/blob/master/LICENSE.txt)
 
 Summary: A Dashboard publishing solution for Data Science teams to share results with decision makers.
 
+Development: https://github.com/ideonate/cdsdashboards
 
+Documentation: https://cdsdashboards.readthedocs.io/
 
 Current build status
 ====================
