@@ -1,6 +1,6 @@
 {% set name = "cdsdashboards" %}
 {% set version = "0.4.1" %}
-{% set build_number = 0 %}
+{% set build_number = 1 %}
 
 package:
   name: {{ name|lower }}-meta
@@ -46,7 +46,7 @@ outputs:
     requirements:
       run:
         - {{ pin_subpackage(name, exact=True) }}
-        - jhsingle-native-proxy >=0.5.2
+        - jhsingle-native-proxy >=0.6.0
         - bokeh-root-cmd >=0.0.5
         - plotlydash-tornado-cmd >=0.0.4
         - rshiny-server-cmd >=0.0.2
