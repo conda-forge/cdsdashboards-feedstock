@@ -1,5 +1,5 @@
 {% set name = "cdsdashboards" %}
-{% set version = "0.3.2" %}
+{% set version = "0.4.3" %}
 {% set build_number = 0 %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e86cdd20a12edbc8b20af971f45031f477678c70aa6fab4a4f6a452a30efd3d5
+  sha256: ce8c636b25a6b5f0dd1ae75a72f67e0a3bdb4fe23d6e9b9749de88b800be51fa
 
 build:
   noarch: python
@@ -26,18 +26,19 @@ outputs:
         - pip
       run:
         - python >=3.6.0,<4.0.0
-        - tornado >=5.1
+        - tornado >=6.0.4
         - traitlets
         - jupyterhub >=1.0.0
         - alembic
         - pluggy
     test:
       imports:
-        - cdsdashboards  
+        - cdsdashboards
       requires:
         - pip
       commands:
         - pip check
+
   - name: {{ name|lower }}-singleuser
     build:
       number: {{ build_number }}
@@ -45,9 +46,10 @@ outputs:
     requirements:
       run:
         - {{ pin_subpackage(name, exact=True) }}
-        - jhsingle-native-proxy >=0.3.1
-        - bokeh-root-cmd >=0.0.4
+        - jhsingle-native-proxy >=0.6.0
+        - bokeh-root-cmd >=0.0.5
         - plotlydash-tornado-cmd >=0.0.4
+        - rshiny-server-cmd >=0.0.2
     test:
       requires:
         - bokeh
@@ -56,10 +58,12 @@ outputs:
         - jhsingle_native_proxy
         - bokeh_root_cmd
         - plotlydash_tornado_cmd
+        - rshiny_server_cmd
       commands:
         - jhsingle-native-proxy --help
         - bokeh-root-cmd --help
         - plotlydash-tornado-cmd --help
+        - rshiny-server-cmd --help
 
 about:
   home: https://github.com/ideonate/cdsdashboards
